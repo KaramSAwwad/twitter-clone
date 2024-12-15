@@ -1,0 +1,11 @@
+{
+    "name": "Tweet",
+    "alias": "tweet",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Tweet\\App\\Providers\\TweetServiceProvider"
+    ],
+    "files": []
+}

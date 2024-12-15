@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/hashtag",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Hashtag\\": "",
+            "Modules\\Hashtag\\App\\": "app/",
+            "Modules\\Hashtag\\Database\\Factories\\": "database/factories/",
+            "Modules\\Hashtag\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Hashtag\\Tests\\": "tests/"
+        }
+    }
+}

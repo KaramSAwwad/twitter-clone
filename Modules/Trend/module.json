@@ -1,0 +1,11 @@
+{
+    "name": "Trend",
+    "alias": "trend",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Trend\\App\\Providers\\TrendServiceProvider"
+    ],
+    "files": []
+}

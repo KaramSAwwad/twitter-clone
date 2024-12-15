@@ -1,0 +1,12 @@
+{
+    "User": true,
+    "Tweet": true,
+    "Social": true,
+    "Notification": true,
+    "Messaging": true,
+    "Media": true,
+    "Hashtag": true,
+    "Trend": true,
+    "Search": true,
+    "Admin": true
+}
