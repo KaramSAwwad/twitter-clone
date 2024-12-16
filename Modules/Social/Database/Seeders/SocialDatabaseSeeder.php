@@ -11,6 +11,13 @@ class SocialDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // $this->call([]);
+        $this->call([
+            FollowerSeeder::class,
+            MuteSeeder::class,
+            BlockSeeder::class,
+            UserListSeeder::class,
+            ListMemberSeeder::class,
+            BookmarkSeeder::class,
+        ]);
     }
 }

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('bookmarks', function (Blueprint $table) {
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // User who bookmarked
             $table->foreignId('tweet_id')->constrained('tweets')->onDelete('cascade'); // Tweet bookmarked
-            $table->timestamp('bookmarked_at')->useCurrent(); // Bookmark timestamp
+            $table->timestamps(); // Adds 'created_at' and 'updated_at' columns
             $table->primary(['user_id', 'tweet_id']); // Composite Primary Key
             $table->softDeletes();
         });

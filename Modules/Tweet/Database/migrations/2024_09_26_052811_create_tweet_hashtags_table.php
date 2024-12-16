@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('hashtag_id')->constrained('hashtags')->onDelete('cascade'); // Hashtag
             $table->primary(['tweet_id', 'hashtag_id']); // Composite Primary Key
             $table->softDeletes();
+            $table->timestamps(); // Adds 'created_at' and 'updated_at' columns
         });
     }
 

@@ -16,8 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // User who retweeted
             $table->foreignId('tweet_id')->constrained('tweets')->onDelete('cascade'); // Original tweet
             $table->string('retweet_comment', 280)->nullable(); // Optional comment
-            $table->timestamp('retweet_at')->useCurrent(); // Retweet timestamp
-            $table->timestamps(); // 'created_at' and 'updated_at'
+            $table->timestamps(); // Adds 'created_at' and 'updated_at' columns
             $table->softDeletes();
         });
     }

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('likes', function (Blueprint $table) {
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // User who liked
             $table->foreignId('tweet_id')->constrained('tweets')->onDelete('cascade'); // Liked tweet
-            $table->timestamp('liked_at')->useCurrent(); // Like timestamp
+            $table->timestamps(); // Adds 'created_at' and 'updated_at' columns
             $table->primary(['user_id', 'tweet_id']); // Composite Primary Key
             $table->softDeletes();
         });

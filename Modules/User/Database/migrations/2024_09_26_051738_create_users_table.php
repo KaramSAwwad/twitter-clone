@@ -23,8 +23,6 @@ return new class extends Migration
             $table->string('website_url')->nullable(); // Personal website. if exists
             $table->string('location', 100)->nullable(); // User's location.
             $table->date('date_of_birth')->nullable(); // Date of birth.
-            $table->timestamp('date_joined')->useCurrent(); // Account creation timestamp.
-            $table->timestamp('last_login')->nullable(); // Last login timestamp.
             $table->boolean('is_verified')->default(false); //  Boolean for account verification.
             $table->boolean('is_private')->default(false); // Boolean for private accounts.
             $table->enum('account_status', ['active', 'suspended', 'deactivated'])->default('active'); // Status (active, suspended, deactivated).

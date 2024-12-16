@@ -7,10 +7,15 @@ use Illuminate\Database\Seeder;
 class UserDatabaseSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds for the User module.
      */
     public function run(): void
     {
-        // $this->call([]);
+        $this->call([
+            UserSeeder::class,
+            UserSettingSeeder::class,
+            PasswordResetSeeder::class,
+            SessionSeeder::class,
+        ]);
     }
 }

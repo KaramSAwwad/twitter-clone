@@ -11,6 +11,8 @@ class MessagingDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // $this->call([]);
+        $this->call([
+            DirectMessageSeeder::class,
+        ]);
     }
 }

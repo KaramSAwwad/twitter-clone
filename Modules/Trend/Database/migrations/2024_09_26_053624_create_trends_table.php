@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id(); // Primary Key: 'id'
             $table->string('tag'); // Trending tag
             $table->unsignedBigInteger('tweet_volume')->default(0); // Number of tweets
-            $table->timestamp('created_at')->useCurrent(); // Creation timestamp
-            $table->timestamp('expires_at')->nullable(); // Expiration timestamp
+            $table->timestamps(); // Adds 'created_at' and 'updated_at' columns
             $table->softDeletes();
         });
     }

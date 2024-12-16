@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id('reset_id'); // (PK): Unique identifier.
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // (FK): User requesting reset.
             $table->string('token'); // Reset token.
-            $table->timestamp('created_at')->useCurrent(); // Timestamp
+            $table->timestamps();
             $table->softDeletes();
         });
     }

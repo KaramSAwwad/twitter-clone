@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('blocks', function (Blueprint $table) {
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // User who blocked
             $table->foreignId('blocked_user_id')->constrained('users')->onDelete('cascade'); // User being blocked
-            $table->timestamp('blocked_at')->useCurrent(); // Block timestamp
+            $table->timestamps(); // Adds 'created_at' and 'updated_at' columns
             $table->primary(['user_id', 'blocked_user_id']); // Composite Primary Key
             $table->softDeletes();
         });

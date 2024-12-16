@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('source_user_id')->nullable()->constrained('users')->onDelete('set null'); // Source user
             $table->foreignId('tweet_id')->nullable()->constrained('tweets')->onDelete('set null'); // Associated tweet
             $table->json('data')->nullable(); // Additional data
-            $table->timestamp('created_at')->useCurrent(); // Creation timestamp
+            $table->timestamps(); // Adds 'created_at' and 'updated_at' columnsp
             $table->boolean('is_read')->default(false); // Read status
         });
     }

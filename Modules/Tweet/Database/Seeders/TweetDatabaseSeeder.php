@@ -11,6 +11,12 @@ class TweetDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // $this->call([]);
+        $this->call([
+            TweetSeeder::class,
+            LikeSeeder::class,
+            RetweetSeeder::class,
+            ReplySeeder::class,
+            TweetHashtagSeeder::class,
+        ]);
     }
 }
